@@ -1,40 +1,51 @@
 # 🧾 Quittung – Mini-Shop-Kasse
 
-Konsolenprogramm für eine einfache Ladenkasse mit Rabatt und Budgetkontrolle – entwickelt im Rahmen der Berufsschulausbildung zur Fachinformatikerin.
+> Konsolenprogramm für eine einfache Ladenkasse mit Rabattsystem und Budgetkontrolle – entwickelt im Rahmen der Berufsschulausbildung zur Fachinformatikerin Anwendungsentwicklung.
 
-## Funktionsumfang
+## 📋 Projektbeschreibung
 
-Der Nutzer gibt seinen Namen, sein Budget und 3 Artikel ein. Nach der Rabattauswahl wird eine formatierte Quittung ausgegeben und geprüft, ob das Budget ausreicht.
+Dieses Programm simuliert eine Ladenkasse. Der Nutzer gibt seinen Namen, ein Budget und 3 Artikel ein. Nach der Rabattauswahl wird eine formatierte Quittung ausgegeben. Das Programm prüft, ob das Budget ausreicht, und zeigt das verbleibende Restbudget an.
+
+## 🚀 Funktionsumfang
 
 ### Eingaben
 - Name und Budget
-- 3 Artikel mit Name, Stückpreis und Menge
+- 3 Artikel mit: Artikelname · Stückpreis · Menge
+- Rabattauswahl
 
 ### Rabattregeln
 | Option | Bedingung | Rabatt |
 |---|---|---|
 | Kein Rabatt | – | 0% |
-| Student | – | -10% |
-| VIP | – | -15% |
-| Gutschein | Nur ab 20 € Einkaufswert | -5 € |
+| Student | – | −10% auf Zwischensumme |
+| VIP-Kunde | – | −15% auf Zwischensumme |
+| Gutschein | Nur ab 20 € Einkaufswert | −5 € fix |
 
 ### Ausgabe
-- Formatierte Quittung mit allen Positionen
-- Zwischensumme, Rabatt, Endsumme
-- Restbudget und Status (OK / NICHT GENUG GELD)
+- Formatierte Quittung mit allen Artikelpositionen
+- Zwischensumme · Rabatt · Endsumme
+- Restbudget und Status: ✅ OK / ❌ Nicht genug Geld
 
-## Verwendete Python-Konzepte
-- `while`-Schleife (Eingabevalidierung + Hauptschleife)
-- `for`-Schleife (Artikel einlesen + Quittungsausgabe)
-- `try` / `except` (Fehlerbehandlung)
-- `if` / `elif` / `else` (Rabattauswahl + Budgetkontrolle)
-- Dictionary (Artikelspeicherung)
-- f-Strings (formatierte Ausgabe)
+## 🧠 Verwendete Python-Konzepte
 
-## Ausführen
+| Konzept | Anwendung im Projekt |
+|---|---|
+| `while`-Schleife | Hauptschleife + Eingabevalidierung |
+| `for`-Schleife | Artikel einlesen (3×) + Quittungsausgabe |
+| `try` / `except` | Fehlerbehandlung bei allen Nutzereingaben |
+| `if` / `elif` / `else` | Rabattauswahl + Budgetkontrolle |
+| Dictionary | Artikel strukturiert speichern (Name, Preis, Menge) |
+| f-Strings | Formatierte, ausgerichtete Quittungsausgabe |
+| `.replace(",", ".")` | Komma-Eingabe bei Dezimalzahlen abfangen |
+
+## ▶️ Ausführen
 
 ```bash
 python quittung.py
 ```
 
-> Voraussetzungen: Python 3.x, keine externen Bibliotheken
+> **Voraussetzungen:** Python 3.x · Keine externen Bibliotheken nötig
+
+## 👩‍💻 Über die Entwicklerin
+
+Dieses Projekt zeigt meine Fähigkeit, Datenstrukturen (Dictionary), Schleifen und Verzweigungen zu kombinieren, um eine praxisnahe Kassenanwendung mit vollständiger Eingabevalidierung und formatierter Ausgabe zu entwickeln.
